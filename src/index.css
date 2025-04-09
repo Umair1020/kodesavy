@@ -1,0 +1,39 @@
+
+/* Custom Styles */
+.hero-section {
+  @apply flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20 bg-white;
+}
+
+.hero-text {
+  @apply text-4xl md:text-6xl font-bold text-gray-900 leading-tight;
+}
+
+.hero-subtext {
+  @apply mt-4 text-lg text-gray-600 max-w-xl;
+}
+
+.hero-highlight {
+  @apply text-pink-600;
+}
+
+.hero-button {
+  @apply mt-6 bg-pink-600 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:bg-pink-700 transition;
+}
+
+.hero-image-container {
+  @apply mt-10 md:mt-0 md:ml-12 relative;
+}
+
+.hero-image {
+  @apply w-full h-auto rounded-3xl shadow-xl;
+}
+
+.video-button {
+  @apply absolute bottom-4 right-4 bg-white text-gray-900 border border-gray-300 rounded-full px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100;
+}
+
+.scroll-down-text {
+  @apply mt-10 text-sm text-gray-500 tracking-widest rotate-90 origin-left md:rotate-0;
+}
+
+/* Add custom utilities if needed */
