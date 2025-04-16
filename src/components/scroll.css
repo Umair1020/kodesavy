@@ -57,7 +57,7 @@
   animation-delay: calc((1 - 7) / 7 * var(--d));
 }
 .ul1>.li:nth-child(8) {
-  animation-delay: calc((1 - 8) / 8 * var(--d));
+  animation-delay: calc((1 - 8) / 7 * var(--d));
 }
 @keyframes r {
   14.2857143% {

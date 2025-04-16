@@ -15,8 +15,10 @@ const Scroller = () => {
     }, []);
     return (
         <>
-            <div className="">
-                <ul className='ul1'>
+            <div className=""> 
+            <h2 className='text-dark text-center fw-bold'>Our Latest <span className='project'>Projects</span> </h2>
+            
+            <ul className='ul1'>
                     <li className='li'><img src='/logo (1).png' className=' d-flex align-items-center '  /></li>
                     <li className='li'><img src='/logo (2).png' className=' d-flex align-items-center ' /></li>
                     <li className='li'><img src='/logo (3).png' className=' d-flex align-items-center ' /></li>

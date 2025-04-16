@@ -13,6 +13,11 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Link } from "react-router-dom";
 import Counter from "../components/Count";
 import IdeasSection from "../components/Ideasection";
+import Testimonials from "../components/Testmonial";
+import Faqs from "../components/Faq";
+import Scroller from "../components/Scroller";
+import Form from "../components/Form";
+import BusinessNewsletter from "../components/Newsletter";
 
 const Landingpage = ({ name }) => {
   const [filter, setFilter] = useState('web-design');
@@ -107,7 +112,7 @@ const Landingpage = ({ name }) => {
   //     };
   //   }
   // }, []);
-console.log(name)
+  console.log(name)
   useEffect(() => {
     const popupTimeout = setTimeout(() => {
       localStorage.removeItem('hasPopupDisplayed');
@@ -165,10 +170,6 @@ console.log(name)
     // Add two more service items for the remaining services
   ];
   return (
-    <>
-
-      {showPopup && <Popupcard />}
-
       <div className="container1"
         style={{
           position: "relative",
@@ -209,13 +210,13 @@ console.log(name)
           }}
         /> */}
           {/* <img className="vector" src='/vector.svg' /> */}
-         
+
           {/* <img className="mx-4" src='/vector.svg' /> */}
           <div className='container'>
-            <div className='row digitalagency'>
+            <div className='row digitalagency digitalagency1'>
 
               <div className='col-lg-12 d-flex align-items-center justify-content-center'>
-                <img src="/empower.png" className="" style={{width: "100px"}} />
+                <img src="/empower.png" className="" style={{ width: "100px" }} />
                 <h1 className="text-dark"
                   style={{
 
@@ -237,7 +238,7 @@ console.log(name)
                 >
                   Agency
                 </h1>
-                <p className="text-dark">Kodesavy delivers innovative software, AI solutions,  and digital transformation to empower businesses  with smart technology.</p>
+                <p className="text-dark">Kodesavy delivers innovative software, AI solutions, and digital transformation to empower businesses with smart technology.</p>
                 <button className='probtn custom-cta' >
                   Our Projects
                 </button>
@@ -247,121 +248,174 @@ console.log(name)
               </div>
             </div>
           </div>
-          <div className="container" ref={containerRef}>
-            <div className="chevron" onClick={handleChevronClick}></div>
-            <div className="chevron" onClick={handleChevronClick}></div>
-            <div className="chevron" onClick={handleChevronClick}></div>
-          </div>
 
           <div className="col-lg-12 background-wrapper">
-  <img className="lady" src="Group.png" alt="Lady" style={{ position: 'relative', zIndex: 2 }} />
-</div>
+            <img className="lady" src="Group.png" alt="Lady" style={{ position: 'relative', zIndex: 2 }} />
+          </div>
 
 
         </div>
         <div className="container bottom-glow-wrapper">
-  <div className="row d-flex justify-content-center align-items-center">
-    <div className="col-lg-6 col-md-5 col-sm-12">
-      <h1 className="sech1 text-dark">
-        Crafting High-Impact  Apps & Websites for <br /> Digital Success
+          <div className="row d-flex justify-content-center align-items-center">
+            <div className="col-lg-6 col-md-5 col-sm-12">
+              <h1 className="sech1 text-dark">
+                Crafting High-Impact Apps & Websites for <br /> Digital Success
       </h1>
-      <br />
-      <p className="text-dark">
-        We're a dynamic digital agency fueling creativity to craft immersive brand experiences. With a blend of innovation and expertise, we sculpt compelling narratives, design captivating visuals, and engineer digital strategies that elevate brands to new heights. At our core, we're storytellers, breathing life into brands through the power of digital
-      </p>
-      <button
-        className="button custom-cta"
-       
-      >
-        Get In Touch
-      </button>
-    </div>
-    <div className="col-lg-6 col-md-5">
-      <br />
-      <img className="sec2img" src="/image1.png" alt="Right Section" />
-    </div>
-          </div>
-        </div> <br />
-        <div className="counter-section background-wrapper py-5">
-        <div className="container">
-          <div className="row text-center">
-            <div className="col-md-3 col-sm-6">
-              <Counter end={4800} duration={2000} label="Job Completed" />
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <Counter end={12} duration={2000} label="Industry Experience" suffix="A+" />
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <Counter end={2800} duration={2000} label="World Wide Clients" />
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <Counter end={400} duration={2000} label="Won Awards" />
-            </div>
-          </div>
-        </div>
-      </div>
-       
-        <div className="row d-flex justify-content-center align-items-center gray1 ">
-          <div className="col-lg-5 col-sm-12 ">
-            <img className="d-flex justify-content-center align-items-center mx-auto w-75" src="/ggirl2.png" />
-          </div>
-
-          <div className="col-lg-7 ">
-
-            <div className="text-center" style={{ fontWeight: "700" }}>
               <br />
-              <h2>The Kodesavy Way</h2>
-            </div>
-            <br />
+              <p className="text-dark">
+                We're a dynamic digital agency fueling creativity to craft immersive brand experiences. With a blend of innovation and expertise, we sculpt compelling narratives, design captivating visuals, and engineer digital strategies that elevate brands to new heights. At our core, we're storytellers, breathing life into brands through the power of digital
+              </p>
+            <button
+              className="button custom-cta"
+              
+            >
+        Get In Touch
+            </button>
+          </div>
+      <div className="col-lg-6 col-md-5">
+        <br />
+        <img className="sec2img" src="/image1.png" alt="Right Section" />
+      </div>
+           </div>
+        </div>  <br />
+        <div  className="counter-section background-wrapper py-5">
+  <div className="container">
+    <div className="row text-center">
+      <div className="col-6 col-md-3">
+        <Counter end={4800} duration={2000} label="Job Completed" />
+      </div>
+      <div className="col-6 col-md-3">
+        <Counter end={12} duration={2000} label="Industry Experience" suffix="A+" />
+      </div>
+      <div className="col-6 col-md-3">
+        <Counter end={2800} duration={2000} label="World Wide Clients" />
+      </div>
+      <div className="col-6 col-md-3">
+        <Counter end={400} duration={2000} label="Won Awards" />
+      </div>
+    </div>  
+  </div>  
+</div>  
+  
+      
 
+    
+ <div className="row d-flex justify-content-center align-items-center gray1 ">
+    <div className="col-lg-5 col-sm-12 ">
+      <img className="d-flex justify-content-center align-items-center mx-auto w-75" src="/ggirl2.png" />
+      </div>
+    
+          <div className="col-lg-7 ">
+    
+            <div className="text-center" style={{ fontWeight: "700" }}>
+        <br />
+        <h2>The Kodesavy Way</h2>
+        </div>
+      <br />
+      
             {/* Move the common structure for each point outside the repeated code */}
-            <div className="solution-point">
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <img src="/correct.png" />
-                </div>
-                <div style={{ margin: '0 10px' }}></div>
-                <div>
-                  <h2 className="heading">Understanding & Strategy</h2>
-                  <p className="para">We analyze client goals, audience, and technology needs to develop high-performance mobile apps, progressive web apps (PWAs), and websites. Our solutions are tailored to align with business objectives, ensuring scalability and a seamless user experience.</p>
-                </div>
-              </div>
+      <div className="solution-point">
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img src="/correct.png" />
             </div>
-
-            <br />
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img src="/correct.png" />
-              </div>
-              <div style={{ margin: '0 10px' }}></div> {/* Thoda sa gap */}
-              <div>
-                <h2 className="heading">Agile Development & UI/UX Excellence</h2>
-                <p className="para">Our agile approach ensures flexibility, with a strong focus on UI/UX to create intuitive, responsive, and visually engaging digital experiences. We design and develop mobile apps, PWAs, and websites optimized for seamless navigation, cross-platform compatibility, and high performance, enhancing user engagement and retention.</p>
-              </div>
-
+          <div style={{ margin: '0 10px' }}></div>
+          <div>
+            <h2 className="heading">Understanding & Strategy</h2>
+            <p className="para">We analyze client goals, audience, and technology needs to develop high-performance mobile apps, progressive web apps (PWAs), and websites. Our solutions are tailored to align with business objectives, ensuring scalability and a seamless user experience.</p>
             </div>
+          </div>
+        </div>
+      
             <br />
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img src="/correct.png" />
-              </div>
-              <div style={{ margin: '0 10px' }}></div> {/* Thoda sa gap */}
-              <div>
-                <h2 className="heading">Quality Assurance & Support</h2>
-                <p className="para">We conduct rigorous testing to ensure apps, PWAs, and websites are bug-free, optimized, and secure. Post-launch, we provide continuous support, updates, and improvements, ensuring long-term success and business growth in the digital space.</p>
-              </div>
-            </div><br />
-              <button
-        className="button custom-cta bg-light text-dark"
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src="/correct.png" />
+         </div> 
+        <div style={{ margin: '0 10px' }}></div> {/* Thoda sa gap */}
+        <div>
+          <h2 className="heading">Agile Development & UI/UX Excellence</h2>
+          <p className="para">Our agile approach ensures flexibility, with a strong focus on UI/UX to create intuitive, responsive, and visually engaging digital experiences. We design and develop mobile apps, PWAs, and websites optimized for seamless navigation, cross-platform compatibility, and high performance, enhancing user engagement and retention.</p>
+          </div>
+        
+            </div>
+      <br />
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src="/correct.png" />
+          </div>
+        <div style={{ margin: '0 10px' }}></div> {/* Thoda sa gap */}
+        <div>
+          <h2 className="heading">Quality Assurance & Support</h2>
+          <p className="para">We conduct rigorous testing to ensure apps, PWAs, and websites are bug-free, optimized, and secure. Post-launch, we provide continuous support, updates, and improvements, ensuring long-term success and business growth in the digital space.</p>
+          </div>
+        </div><br />
+        <button
+      className="button custom-cta bg-light text-dark"
        
       >
         Get In Touch
       </button>
-              <br /><br />
+            <br /><br />
+    
+     </div>
+  </div>
+        <br / ><br />
+        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
      
-          </div>
-        </div>
-         <IdeasSection />
+                 <div class="row align-items-center">
+                  
+                   <div class="col-lg-7">
+                     <div class="row g-4">
+     
+                       <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                         <br />  
+                          <div class="service-item mt-2" style={{ background: "#FB2156" }}>
+                           <img src='/app (3).png' />
+                           <h3 className='text-light'><br />Game2 Development</h3>
+                           <p className='text-light fs-6'>Kodesavy offers E-Commerce PWA Development, delivering fast, secure, and responsive shopping experiences that enhance customer engagement, boost conversions, and provide seamless functionality across all devices.</p>
+                         </div>
+                       </div>
+     
+                       <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                         <br /> <div class="service-items mt-2">
+                           <img className='' src='/app (4).png' />
+                           <h3 className='text-dark'><br />Enterprise & Custom App</h3>
+                           <p className='text-dark fs-6'>Kodesavy offers tailored Enterprise and Custom App Development services, delivering secure, scalable solutions that enhance efficiency, streamline operations, and provide seamless user experiences to meet your unique business needs.</p>
+     
+                         </div>
+     
+                       </div>
+                       <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400"><br />
+                         <br /> <div class="service-items mt-2">
+                           <img className='' src='/app (1).png' />
+                           <h3 className='text-dark'> <br />Fintech & Block Chain Apps</h3>
+                           <p className='text-dark fs-6'>Kodesavy specializes in Fintech and Blockchain App Development, creating secure, scalable solutions that enhance financial transactions, improve transparency, and drive innovation in the fintech and blockchain sectors for your business.</p>
+                         </div>
+                       </div>
+     
+                       <br /><div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500"><br />
+     
+                         <br /> <div class="service-items mt-2">
+                           <img className='' src='/app (2).png' />
+                           <h3 className='text-dark'><br />AI &
+                             IoT Apps</h3>
+                           <p className='text-dark fs-6'>Kodesavy provides AI and IoT App Development services, creating intelligent, connected solutions that enhance automation, improve decision-making, and drive innovation for smarter, more efficient business operations.</p>
+                         </div>
+                       </div>
+                     </div>
+                   </div> <br /> <br />
+                   <div class="col-lg-5 mb-5 mb-lg-0 background-wrapper">
+                    <img src="/sucess.png" />
+                   </div>
+
+                   <div className='col-lg-12 bottom-glow-wrapper'> <br /><br /><br />
+                     <img src='/web6.png' className='w-100' />
+                   </div>
+                 </div>
+               </div>
+        <Scroller />
+         {/* <IdeasSection /> */}
         <Desktop>
           <div className="background-wrapper">
           <div className="container">
@@ -376,74 +430,87 @@ console.log(name)
                 </div>
               </Link>
             </div>
-          </div>
-          </div>
+          </div>  
+          </div >
         </Desktop>
-        <Mobile>
-          <div className="container">
-            <div className="row d-flex justify-content-center">
-              <div className="col-12 my-5">
-              <h2 className="text-start text-dark " style={{ fontWeight: "700" }}>Digital Excellence:  <br />
-              <span className="color">App, Web & PWA  </span> Services</h2>
-                  <button style={{ borderRadius: "41px", display: "flex", justifyContent: "end", alignItems: "flex-end", background: "none", color: "#000", padding: "10px", border: "2px solid #000 ", width: "max-content" }}>See All</button>
-              </div>
-
-            </div>
-          </div>
-        </Mobile>
-        <Desktop>
-    
+        <Mobile>  
     <div className="container">
-      <div className="row justify-content-center">
-        {/* Card 1 */}
-        <div className="col-lg-5 col-sm-12">
-          <div className="card">
-            <div className="card-icon"><img src="ser1.png" alt="Icon" /></div>
-            <h3>Web Development</h3>
-            <p>Crafting high-impact websites that blend innovation and functionality. From sleek designs to seamless user experiences, we bring your digital vision to life.</p>
-            <Link to="/portfolio"><button className="read-more-btn">Read More</button></Link>
-          </div>
+      <div className="row d-flex justify-content-center">
+        <div className="col-12 my-5">
+        <h2 className="text-start text-dark " style={{ fontWeight: "700" }}>Digital Excellence:  <br />
+          <span className="color">App, Web & PWA  </span> Services</h2>
+                <button style={{ borderRadius: "41px", display: "flex", justifyContent: "end", alignItems: "flex-end", background: "none", color: "#000", padding: "10px", border: "2px solid #000 ", width: "max-content" }}>See All</button>
         </div>
-
-        {/* Card 2 */}
-        <div className="col-lg-5 col-sm-12">
-          <div className="card">
-            <div className="card-icon"><img src="ser2.png" alt="Icon" /></div>
-            <h3>SEO</h3>
-            <p>Boosting online presence through tailored SEO strategies. From optimization to content, we elevate your visibility for digital success.</p>
-            <Link to="/portfolio"><button className="read-more-btn">Read More</button></Link>
-          </div>
+      
+            </div>
+    </div>
+  </Mobile>
+        <Desktop >
+  
+<div className="container">
+    <div className="row justify-content-center">
+      {/* Card 1 */}
+      <div className="col-lg-5 col-sm-12">
+        <div
+          className="card service-card"
+          style={{ backgroundImage: "url('/service1.png')" }}
+        >
+          <div className="card-icon"><img src="/ser1.png" alt="Icon" /></div>
+          <h3>Web Development</h3>
+          <p>Crafting high-impact websites that blend innovation and functionality. From sleek designs to seamless user experiences, we bring your digital vision to life.</p>
+          <Link to="/portfolio"><button className="custom-cta2 bg-light text-dark">Read More</button></Link>
         </div>
+      </div>
 
-        {/* Card 3 */}
-        <div className="col-lg-5 col-sm-12">
-          <div className="card">
-            <div className="card-icon"><img src="ser3.png" alt="Icon" /></div>
-            <h3>Content Writing</h3>
-            <p>Expert writers crafting captivating narratives and engaging copy. From compelling web content to SEO-optimized articles, we boost brand visibility and story impact.</p>
-            <Link to="/portfolio"><button className="read-more-btn">Read More</button></Link>
-          </div>
+      {/* Card 2 */}
+      <div className="col-lg-5 col-sm-12">
+        <div
+          className="card service-card"
+          style={{ backgroundImage: "url('/service2.png')" }}
+        >
+          <div className="card-icon"><img src="/ser2.png" alt="Icon" /></div>
+          <h3>SEO</h3>
+          <p>Boosting online presence through tailored SEO strategies. From optimization to content, we elevate your visibility for digital success.</p>
+          <Link to="/portfolio"><button className="custom-cta2">Read More</button></Link>
         </div>
+      </div>
 
-        {/* Card 4 */}
-        <div className="col-lg-5 col-sm-12">
-          <div className="card">
-            <div className="card-icon"><img src="ser4.png" alt="Icon" /></div>
-            <h3>UI/UX Design</h3>
-            <p>Crafting captivating brand visuals that inspire and elevate. From logos to marketing materials, we bring your brand to life with compelling designs.</p>
-            <Link to="/portfolio"><button className="read-more-btn">Read More</button></Link>
-          </div>
+      {/* Card 3 */}
+      <div className="col-lg-5 col-sm-12">
+        <div
+          className="card service-card"
+          style={{ backgroundImage: "url('/service3.png')" }}
+        >
+          <div className="card-icon"><img src="ser3.png" alt="Icon" /></div>
+          <h3>Content Writing</h3>
+          <p>Expert writers crafting captivating narratives and engaging copy. From compelling web content to SEO-optimized articles, we boost brand visibility and story impact.</p>
+          <Link to="/portfolio"><button className="custom-cta2">Read More</button></Link>
+        </div>
+      </div>
+
+      {/* Card 4 */}
+      <div className="col-lg-5 col-sm-12">
+        <div
+          className="card service-card"
+          style={{ backgroundImage: "url('/service4.png')" }}
+        >
+          <div className="card-icon"><img src="ser4.png" alt="Icon" /></div>
+          <h3>UI/UX Design</h3>
+          <p>Crafting captivating brand visuals that inspire and elevate. From logos to marketing materials, we bring your brand to life with compelling designs.</p>
+          <Link to="/portfolio"><button className="custom-cta2">Read More</button></Link>
         </div>
       </div>
     </div>
 
+  </div>  
+  
         </Desktop>
-        <Mobile>
+        <Mobile>  
           <div className="container">
             <div className="row justify-content-center">
               {/* {serviceData.map((service, index) => ( */}
               <div className="col-lg-5 col-sm-12"  >
-                <div className="card" >
+                <div className="card"  >
                   {/* Service Icon */}
                   <div className="card-icon"><img src="ser1.png" /></div>
 
@@ -454,12 +521,12 @@ console.log(name)
                   <p style={{ width: "70%", fontWeight: "100" }}>Crafting high-impact websites that blend innovation and functionality. From sleek designs to seamless user experiences, we bring your digital vision to life.</p>
 
                   {/* Read More Button */}
-                  <Link to="/portfolio"><button className="read-more-btn">Read More</button></Link>
+                  <Link to="/portfolio"><button className="custom-cta2">Read More</button></Link>
                 </div>
                 <br />
               </div>
               <div className="col-lg-5 col-sm-12"  >
-                <div className="card" >
+                <div className="card"  >
                   {/* Service Icon */}
                   <div className="card-icon"><img src="ser2.png" /></div>
 
@@ -470,12 +537,12 @@ console.log(name)
                   <p style={{ width: "70%", fontWeight: "100" }}>Boosting online presence through tailored SEO strategies. From optimization to content, we elevate your visibility for digital success."
                   </p>
 
-                  <Link to="/portfolio"> <button className="read-more-btn">Read More</button></Link>
+                  <Link to="/portfolio"> <button className="custom-cta">Read More</button></Link>
                 </div>
                 <br />
               </div>
               <div className="col-lg-5 col-sm-12"  >
-                <div className="card" >
+                <div className="card"  >
                   {/* Service Icon */}
                   <div className="card-icon"><img src="ser3.png" /></div>
 
@@ -486,12 +553,12 @@ console.log(name)
                   <p style={{ width: "70%", fontWeight: "100" }}>Expert writers crafting captivating narratives and engaging copy. From compelling web content to SEO-optimized articles, we boost brand visibility and story impact</p>
 
                   {/* Read More Button */}
-                  <Link to="/portfolio"><button className="read-more-btn">Read More</button></Link>
+                  <Link to="/portfolio"><button className="custom-cta2">Read More</button></Link>
                 </div>
                 <br />
               </div>
               <div className="col-lg-5 col-sm-12"  >
-                <div className="card" >
+                <div className="card"  >
                   {/* Service Icon */}
                   <div className="card-icon"><img src="ser4.png" /></div>
 
@@ -502,207 +569,32 @@ console.log(name)
                   <p style={{ width: "70%", fontWeight: "100" }}>Crafting captivating brand visuals that inspire and elevate. From logos to marketing materials, we bring your brand to life with compelling designs."
                   </p>
 
-                  <Link to="/portfolio"> <button className="read-more-btn">Read More</button></Link>
+                  <Link to="/portfolio"> <button className="custom-cta">Read More</button></Link>
                 </div>
                 <br />
               </div>
-              <br />
-            </div>
-          </div>
+              <br / >
+  </div>
+          </div>  
         </Mobile>
-        <Desktop>
-          <div className='portfolio'>
-            <section>
-              <h2 className="text-center fw-bold "> <br />
-                Our Latest Projects
-              </h2>
-              <div className="col-lg-12 d-flex col-md-7 col-sm-7 my-2" >
-                <div className="portfolio-buttons mx-auto" >
-                  <button className="mx-2 " style={filter === 'social-media' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('social-media')}>Social Media</button>
-                  <button className="mx-2 " style={filter === 'graphics-desining' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('graphics-desining')}>Graphic Designing</button>
-                  <button className="mx-2 " style={filter === 'web-design' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('web-design')}>Web Design and Development</button>
-                  <button className="mx-2 " style={filter === 'app-development' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('app-development')}>App Development</button>
-                </div>
-              </div><br />
-              <div className="portfolio-list">
-                {filteredPortfolio.map((item, index) => (
-                  <div key={index} className="portfolio-item">
-
-                    <div className="image-gallery mx-auto">
-                      {Array.isArray(item.images) ? (
-                        <div class="row" style={{
-                          margin: "auto",
-                          display: "flex",
-                          justifyContent: "center"
-                        }} bis_skin_checked="1">
-                          {item.images.map((image, i) => (
-                            <div key={i} className="col-lg-4">
-
-                              <section class="portfoliowrp">
-                                {/* <div class="container-fluid" bis_skin_checked="1"> */}
-                                <div class="tab current ser-port tabs-Web-design wbport" bis_skin_checked="1">
-                                  <div class="row" bis_skin_checked="1">
-                                    <div class="col-md-12" bis_skin_checked="1">
-                                      <div class="tab ser-port tabs-custm-web wbport" bis_skin_checked="1">
-                                        <div class="row" bis_skin_checked="1">
-                                          <div class="col-md-12" bis_skin_checked="1">
-                                            <div class="port-box" bis_skin_checked="1">
-
-                                              <ul className='d-flex'>
-
-                                                <li class="hk_web_height lazy tabs-web-dsgn"
-                                                  data-src="/new1.webp" alt="t-1"
-                                                  data-was-processed="true"
-                                                  style={{ backgroundImage: `url(${image})`, }}></li>
-
-                                              </ul>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* </div> */}
-                                </div>
-                              </section>
-                            </div>
-
-
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="box1">
-                          <img className="port-box" src={item.images} alt={item.title} />
-                        </div>
-                      )}
-                    </div>
-                    <br />
-                    <p className='description'>{item.description}</p>
-                  </div>
-                ))}
-
-              </div>
-            </section >
-
-          </div >
-        </Desktop>
-        <Mobile>
-          <div className='portfolio'>
-            <section>
-              <h2 className="text-center fw-bold "> <br />
-                Our Latest Projects
-              </h2>
-              <div className="col-lg-12 d-flex col-md-7 col-sm-7 my-2" >
-                <div className="portfolio-buttons mx-auto" style={{
-                  display: " flex",
-                  flexWrap: "wrap"
-                }}>
-                  <button className="mx-auto " style={filter === 'social-media' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('social-media')}>Social Media</button>
-                  <button className="mx-auto " style={filter === 'graphics-desining' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('graphics-desining')}>Graphic Designing</button>
-                  <button className="mx-auto " style={filter === 'web-design' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('web-design')}>Web Design and Development</button>
-                  <button className="mx-auto " style={filter === 'app-development' ? buttonStyle : inactiveButtonStyle} onClick={() => setFilter('app-development')}>App Development</button>
-                </div>
-              </div><br />
-              <div className="portfolio-list">
-                {filteredPortfolio.map((item, index) => (
-                  <div key={index} className="portfolio-item">
-
-                    <div className="image-gallery mx-auto">
-                      {Array.isArray(item.images) ? (
-                        <div class="row" style={{
-                          margin: "auto",
-                          display: "flex",
-                          justifyContent: "center"
-                        }} bis_skin_checked="1">
-                          {item.images.map((image, i) => (
-                            <div key={i} className="col-lg-4">
-
-                              <section class="portfoliowrp">
-                                {/* <div class="container-fluid" bis_skin_checked="1"> */}
-                                <div class="tab current ser-port tabs-Web-design wbport" bis_skin_checked="1">
-                                  <div class="row" bis_skin_checked="1">
-                                    <div class="col-md-12" bis_skin_checked="1">
-                                      <div class="tab ser-port tabs-custm-web wbport" bis_skin_checked="1">
-                                        <div class="row" bis_skin_checked="1">
-                                          <div class="col-md-12" bis_skin_checked="1">
-                                            <div class="port-box" bis_skin_checked="1">
-
-                                              <ul className='d-flex'>
-
-                                                <li class="hk_web_height lazy tabs-web-dsgn"
-                                                  data-src="/new1.webp" alt="t-1"
-                                                  data-was-processed="true"
-                                                  style={{ backgroundImage: `url(${image})`, }}></li>
-
-                                              </ul>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* </div> */}
-                                </div>
-                              </section>
-                            </div>
-
-
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="box1">
-                          <img className="port-box" src={item.images} alt={item.title} />
-                        </div>
-                      )}
-                    </div>
-                    <br />
-                    <p className='description'>{item.description}</p>
-                  </div>
-                ))}
-
-              </div>
-            </section >
-
-          </div >
-        </Mobile>
+  
+             
         <section id="testimonials" className="testimonials">
           <div className="container" data-aos="fade-up">
             <div className="section-header"> <br /> <br />
-              <h2 style={{ fontFamily: "Montserrat", fontWeight: "700" }}>What  Our Client Says</h2>
+            <h2 className="text-dark fw-bold ">Hear From Our <span className="color">Clients</span> </h2>
             </div>
             <div className="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
               <div className="swiper-wrapper">
 
                 <Swiper
-                  slidesPerView={1}
-                  spaceBetween={10}
-                  style={{
-                    '--swiper-navigation-color': '#fff',
-                    '--swiper-pagination-color': '#fff',
-                  }}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  navigation={true}
+                  slidesPerView={'auto'}
+                  centeredSlides={true}
+                  spaceBetween={30}
                   pagination={{
                     clickable: true,
                   }}
-                  breakpoints={{
-                    640: {
-                      slidesPerView: 2,
-                      spaceBetween: 20,
-                    },
-                    768: {
-                      slidesPerView: 2,
-                      spaceBetween: 40,
-                    },
-                    1024: {
-                      slidesPerView: 3,
-                      spaceBetween: 50,
-                    },
-                  }}
-                  modules={[Pagination, Navigation]}
+                  modules={[Pagination]}
                   className="mySwiper"
                 >
                   <div className="swiper-slide">
@@ -716,7 +608,7 @@ console.log(name)
 
                           </p>
                           <div className="d-flex align-items-center">
-                            <img src="agha.jpeg" className="testimonial-img flex-shrink-0" alt="" />
+                            <img src="/agha.png" className="testimonial-img flex-shrink-0" alt="" />
                             <div>
                               <h3>Ajaz Ali </h3>
                               <h4>Client</h4>
@@ -740,7 +632,7 @@ console.log(name)
 
                           </p>
                           <div className="d-flex align-items-center">
-                            <img src="/ali.jpeg" className="testimonial-img flex-shrink-0" alt="" />
+                            <img src="/agha.png" className="testimonial-img flex-shrink-0" alt="" />
                             <div>
                               <h3>Ali Muhammad</h3>
                               <h4>Client</h4>
@@ -766,7 +658,7 @@ console.log(name)
 
                           </p>
                           <div className="d-flex align-items-center">
-                            <img src="aziz.jpeg" className="testimonial-img flex-shrink-0" alt="" />
+                            <img src="/agha.png" className="testimonial-img flex-shrink-0" alt="" />
                             <div>
                               <h3>Nadeem Ali</h3>
                               <h4>Client</h4>
@@ -780,53 +672,7 @@ console.log(name)
                     </SwiperSlide>
                   </div>
 
-                  <div className="swiper-slide">
-                    <SwiperSlide>
-                      <div className="testimonial-wrap">
-                        <div className="testimonial-item">
-                          <p>
-                            <img src="/quote.png" style={{ width: "50px", marginTop: "-30px" }} />
-                            Innovo Solutions proved to be a great help in developing my website.Their professionalism and the quality of their work were impressive. Timely delivery and responsive customer service made the whole experience seamless.
-                          </p>
-                          <div className="d-flex align-items-center">
-                            <img src="/waqas.jpeg" className="testimonial-img flex-shrink-0" alt="" />
-                            <div>
-                              <h3>Waqas Azam</h3>
-                              <h4>Client</h4>
-                              <div class="stars">
-                                <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <SwiperSlide>
-                      <div className="testimonial-wrap">
-                        <div className="testimonial-item">
-                          <p>
-                            <img src="/quote.png" style={{ width: "50px", marginTop: "-30px" }} />
-
-                            Innovo Solutions excelled in crafting the UI/UX design for my project. Their intuitive design approach and attention to detail greatly enhanced the user experience. I was thoroughly impressed with their creativity and the seamless functionality they implemented.
-
-                          </p>
-                          <div className="d-flex align-items-center">
-                            <img src="agha.jpeg" className="testimonial-img flex-shrink-0" alt="" />
-                            <div>
-                              <h3>Ali Agha</h3>
-                              <h4>Client</h4>
-                              <div class="stars">
-                                <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  </div>
+                
                 </Swiper>
               </div>
 
@@ -834,10 +680,13 @@ console.log(name)
 
           </div>
         </section >
+        <Faqs />
+        <Form />
+        <BusinessNewsletter />
         <Footer />
-      </div >
+      </div>
 
-    </>
+
   );
 };
 

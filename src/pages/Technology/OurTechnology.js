@@ -41,8 +41,8 @@ const OurTechnology = () => {
                 return (
                     <div className='techmain'>
                         <br />
-                        <h2 className='text-light text-center'>Design Technologies</h2>
-                        <p className='text-light text-center'></p>
+                        <h2 className='text-dark text-center'>Design Technologies</h2>
+                        <p className='text-dark text-center w-75 mx-auto'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's .</p>
                         <div className="technologies_card_main_div" bis_skin_checked="1">
                             <div className=" technologies_card_inner_div" bis_skin_checked="1">
                                 <img src={des1} alt="Image 1" />
@@ -64,8 +64,8 @@ const OurTechnology = () => {
                 return (
                     <div>
                         <br />
-                        <h2 className='text-light text-center'>Database Technologies</h2>
-                        <p className='text-light text-center'></p>
+                        <h2 className='text-dark text-center'>Database Technologies</h2>
+                        <p className='text-dark text-center w-75 mx-auto'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's .</p>
                         <div className="technologies_card_main_div" bis_skin_checked="1">
                             <div className="technologies_card_inner_div" bis_skin_checked="1">
                                 <img src={data1} alt="Image 3" />
@@ -87,8 +87,8 @@ const OurTechnology = () => {
                 return (
                     <div>
                         <br />
-                        <h2 className='text-light text-center'>Cloud Technologies</h2>
-                        <p className='text-light text-center'></p>
+                        <h2 className='text-dark text-center'>Cloud Technologies</h2>
+                        <p className='text-dark text-center w-75 mx-auto'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's .</p>
                         <div className="technologies_card_main_div" bis_skin_checked="1">
                             <div className="technologies_card_inner_div" bis_skin_checked="1">
                                 <img src={cloud1} alt="Image 5" />
@@ -104,8 +104,8 @@ const OurTechnology = () => {
                 return (
                     <div>
                         <br />
-                        <h2 className='text-light text-center'>App Technologies </h2>
-                        <p className='text-light text-center'></p>
+                        <h2 className='text-dark text-center'>App Technologies </h2>
+                        <p className='text-dark text-center w-75 mx-auto'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's .</p>
                         <div className="technologies_card_main_div" bis_skin_checked="1">
                             <div className="technologies_card_inner_div" bis_skin_checked="1">
                                 <img src={app1} alt="Image 7" />
@@ -124,8 +124,8 @@ const OurTechnology = () => {
                 return (
                     <div>
                         <br />
-                        <h2 className='text-light text-center'>Web Technologies </h2>
-                        <p className='text-light text-center'></p>
+                        <h2 className='text-dark text-center'>Web Technologies </h2>
+                        <p className='text-dark text-center w-75 mx-auto'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's .</p>
                         <div className="technologies_card_main_div" bis_skin_checked="1">
                             <div className="technologies_card_inner_div1" bis_skin_checked="1">
                                 <img src={img1} alt="Image 9" />
@@ -168,7 +168,7 @@ const OurTechnology = () => {
         <div className="container1"
             style={{
                 position: "relative",
-                backgroundColor: "#000c2b",
+                // backgroundColor: "#000c2b",
                 width: "100%",
                 overflow: "hidden",
                 textAlign: "left",
@@ -180,6 +180,31 @@ const OurTechnology = () => {
             <div className='' >
 
                 <Header />
+                <div className='col-lg-12  d-flex align-items-center justify-content-center digitalagency1'>
+                            <div className=''><img src='/reddot.svg' /></div>
+                            <h1 className=' ml-4  contact-heading  text-dark'
+                                style={{
+                                    textAlign: "center",
+                                    fontWeight: 700
+                                }}
+                            >
+                                Our
+                            </h1>
+                            {/* <img className="mx-auto vector  " src='/vector.svg' /> */}
+                            {/* <img className="btn6" src='/worldclass.svg' /> */}
+                        </div>
+                        <div className='col-lg-12 d-flex align-items-center justify-content-center'>
+                           
+                            <h1 className='abouth1  contact-heading text-center fs-1 color'
+                                style={{
+
+                                    fontWeight: 700
+                                }}
+                            >
+                                Specialities
+                            </h1>
+                            <div className=' ml-5'><img src='/blackdot.svg' /></div>
+                        </div>
                 <div class="tabs_main_div" bis_skin_checked="1">
                     <div class="tabs_inner_div" bis_skin_checked="1">
                         <div class="dotted_line_div" bis_skin_checked="1">

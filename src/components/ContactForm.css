@@ -1,0 +1,114 @@
+.contact-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact-heading {
+    font-size: 70px;
+    font-weight: 700;
+  }
+  
+  .contact-heading .highlight {
+    color: #ff2e63;
+  }
+  
+  .dot {
+    color: #000;
+    font-size: 32px;
+  }
+  
+  .contact-subtext {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .form-box {
+    margin-top: 40px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .form-box h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  input, textarea {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: none;
+  }
+  
+  .services {
+    margin-bottom: 20px;
+  }
+  
+  .services label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .service-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .service-btn {
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .service-btn.active {
+    background: #ff2e63;
+    color: rgb(255, 255, 255);
+    border: none;
+  }
+  
+  .submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff2e63;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

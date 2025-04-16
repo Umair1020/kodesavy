@@ -10,12 +10,15 @@ import Landingpage from "./pages/Landingpage";
 import Aboutus from "./pages/Aboutus";
 import OurTechnology from "./pages/Technology/OurTechnology";
 import Portfolio from "./pages/Portfolio/Portfolio";
-import Webdevelopment from "./pages/Portfolio/Webdevelopment";
 import Mobapp from "./pages/Portfolio/Mobapp";
 import Social from "./pages/Portfolio/Social";
-import Ui from "./pages/Portfolio/Ui";
 import HeroSection from "./pages/Banner";
 import CustomHeaderBanner from "./pages/Banner";
+import ContactForm from "./components/ContactForm22";
+import Appdev from "./pages/Services/Appdevelopment";
+import Webdev from "./pages/Services/Webdevelopment";
+import Pwadevelelopment from "./pages/Services/Pwadevelelopment";
+import Bloglist from "./pages/Bloglist";
 
 function App() {
   const action = useNavigationType();
@@ -57,13 +60,14 @@ function App() {
     <Routes>
       <Route path="/" element={<Landingpage  />} />
       <Route path="/about" element={<Aboutus />} />
+      <Route path="/contact" element={<ContactForm />} />
       <Route path="/technology" element={<OurTechnology />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/portfolio/web" element={<Webdevelopment />} />
-      <Route path="/portfolio/App" element={<Mobapp />} />
-      <Route path="/portfolio/social" element={<Social />} />
-      <Route path="/banner" element={<CustomHeaderBanner />} />
-      <Route path="/portfolio/graphicdesigning" element={<Ui />} />
+      <Route path="/blog" element={<Bloglist />} />
+      <Route path="/services/app-development" element={<Appdev />} />
+      <Route path="/services/web-development" element={<Webdev />} />
+      <Route path="/services/pwa-development" element={<Pwadevelelopment />} />
+    
+
     </Routes>
   );
 }

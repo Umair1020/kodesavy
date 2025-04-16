@@ -2,7 +2,6 @@ import React from 'react';
 import './IdeasSection.css';
 import Scroller from './Scroller';
 
-
 const IdeasSection = () => {
   return (
     <div className="ideas-section">
@@ -18,15 +17,12 @@ const IdeasSection = () => {
               <p className='text-dark'><strong>79K+</strong><br />We've completed 79,000+ websites, ensuring seamless user experience and tailored, responsive designs.</p>
             </div>
 
-            
             <div class="col-lg-4">
               <div class="row gy-4">
                 <div class="col-lg-6">
                   <img src="/meet (1).png" class="img-fluid" alt="" />
                 </div>
-                {/* <div class="col-lg-12">
-                  <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="" />
-                </div> */}
+               
               </div>
             </div>
             <div class="col-lg-4">
